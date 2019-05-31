@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  /* ボーダーを含んだものまでサイズにしてね */
+}
+
+/* ここから最初のロゴとヘッダーと画像 */
+
+#wrapper {
+  width: 1080px;
+  margin: 0 auto;
+  /* 上下0、左右がautoなのでいい感じに全体合わせになる */
+  /* background-color: #cccccc; */
+}
+
+.header img {
+  width: 208px;
+  margin: 36px 0;
+}
+
+#main-visual {
+  position: relative;
+}
+
+#main-visual .main-visualpic {
+  width: 100%;
+}
+
+#main-visual .main-visualcatchcopy {
+  width: 242px;
+  position: absolute;
+  top: 52px;
+  left: 738px;
+}
+
+/* ここからグローバルナビ */
+.global-nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.global-nav ul li {
+  padding: 40px 0 124px;
+}
+.global-nav ul li a {
+  display: block;
+  height: 25px;
+  width: 180px;
+  line-height: 25px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: #454545;
+  border-right: 2px solid #575757;
+  font-family: "Montserrat", sans-serif;
+}
+.global-nav ul li:first-child a {
+  border-left: 2px solid #575757;
+}
+
+.global-nav ul li a:hover {
+  color: #9aaf24;
+  background-color: #fafafa;
+}
+
+/* ここからnewsのところ */
+
+
+
+/* 真ん中にならないのはなぜ？ */
+
+.h2titleset {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+}
+h2 {
+  display: inline;
+  background-image: url(../img/titlebar2.png); 
+  background-repeat:  no-repeat;  
+  font-weight: bold;
+  font-size: 24px;
+  color: #454545;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 8px;
+
+}
+
+
+
+/* ここからNewsの記事のところ */
+
+.news-wrapper {
+    width: 1080px;
+    height: 425px;
+    background-color: #fafafa;
+    margin-bottom: 123px;
+    padding-top: 70px;
+    border: 1px solid  rgba(207, 207, 207, 0.3);
+}
+
+.news-wrapper ul {
+  width: 720px;
+  margin: 40px auto 0;
+}
+
+.news-wrapper ul li {
+  display: flex;
+  padding-bottom: 28px;
+  /* background-color: aquamarine; */
+}
+
+
+.news-wrapper ul li span {
+  text-align: center;
+  line-height: 28px;
+  font-family: "Montserrat", sans-serif;
+  width: 130px;
+  height: 28px;
+  background-color: #333333;
+  color: white;
+  margin-right: 40px;
+  
+}
+
+.news-wrapper ul li a {
+  display: block;
+  line-height: 1.2em;
+  height: 28px;
+  width: 550px;
+  color: #454545;
+  text-decoration-color: #454545;
+}
+
+
+
+/* こっからfeatures */
+.features{
+    display: flex;
+    padding-bottom: 123px;
+    margin-top: 76px;
+}
+.featureimg img{
+    flex-shrink: 0;
+    width: 360px;
+    height: 285px;
+    margin-right: 56px;
+}
+
+.feature {
+  
+    width: 664px;
+    height: 283px;
+    /* background-color: #9aaf24; */
+}
+.explanation {
+    font-size: 24px;
+    padding-bottom: 40px;
+    color: #454545;
+}
+
+
+.feature p {
+line-height: 1.5em;
+color: #454545;
+}
+/* こっからsubscription */
+
+
+.subscription-exlanation{
+    width: 728px;
+    height: 48px;
+    color: #454545;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    margin-top: 50px;
+
+    
+}
+.plan-area {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.plan-area a {
+    text-decoration: none;
+    padding-bottom: 126px;
+}
+.plan {
+    width: 344px;
+    height: 456px;
+    background-color: white;
+    border: 4px solid #c9e23f;
+    margin-right: 24px;
+    margin-top: 60px;
+    box-shadow:0px 0px 8px -1px rgba(166,166,166,0.6);
+}
+
+.plan img {
+width:336px;
+height: 196px;
+margin-bottom: 30px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 22px;
+    color: #454545;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 20px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 40px;
+    color: #454545;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    padding-bottom: 40px;
+
+}
+.plan-explanation{
+    font-size: 14px;
+    color: #454545;
+    padding-bottom: 22px;
+
+}
+
+.plan-button {
+    width: 296px; 
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #eeeeee;
+    color: #454545;
+    margin: 0 auto;
+}
+
+
+/* こっからアイテム */
+.itemspics {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1080px;
+    height: 360px;
+    margin: 0 auto 461px;
+    margin-top: 72px;
+}
+.itempics img {
+    width: 33.3%;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 56px;
+}
