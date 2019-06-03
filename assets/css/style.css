@@ -86,10 +86,6 @@ header .toggle-button {
     top: 25px;
     right: 5%;
   }
-
-  .globalnav {
-    display: none;
-  }
 }
 
 /* ここからグローバルナビ */
@@ -124,9 +120,9 @@ header .toggle-button {
 /* ここからグローバルナビメディアクエリ */
 
 @media (max-width: 768px) {
-  .globalnav {
+  /* .globalnav {
     display: none;
-  }
+  } */
 
   .globalnav ul {
     display: block;
@@ -165,7 +161,7 @@ header .toggle-button {
   .globalnav ul li a:hover {
     color: #454545;
   }
-}
+} 
 
 /* ここからmainのところ */
 /* ここh2のタイトルセット*/
@@ -311,7 +307,7 @@ h2 {
 /* こっからsubscription */
 
 .subscription-wrapper {
-  background-color: #b8c8df;
+  /* background-color: #b8c8df; */
 }
 .subscription-explanation {
   width: 728px;
@@ -431,11 +427,15 @@ a:hover .plan-button {
 }
 
 /* こっからアイテム */
+
+.items-wrapper {
+  /* background-color: #c9e23f; */
+
+}
 .itemspics {
   display: flex;
   flex-wrap: wrap;
   width: 1080px;
-  height: 360px;
   margin: 0 auto 461px;
   margin-top: 72px;
 }
@@ -451,6 +451,8 @@ a:hover .plan-button {
   .itemspics {
     display: block;
     width: 100%;
+    text-align: center;
+    margin-bottom: 42px;
   }
 }
 /* こっからフッター */
@@ -462,4 +464,10 @@ small {
   text-align: center;
   margin-bottom: 56px;
   font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 768px) {
+small {
+  font-size: 13px;
+}
 }
