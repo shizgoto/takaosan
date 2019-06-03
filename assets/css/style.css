@@ -7,11 +7,42 @@ body {
   margin: 0 auto;
 }
 
+/* ここからヘッダー */
+
 header h1 img {
   width: 208px;
   margin: 36px 0;
+  
 }
 
+header .toggle-button {
+  display: none;
+}
+
+/* ここからヘッダーのメディアクエリ */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header .toggle-button {
+    /* 小さくしていったら、ハンバーガーアイコンを見せる設定 。このままやったらスクロールしたら消えてしまうからpositionをつける。*/
+    display: block;
+    position: fixed;
+    top: 22px;
+    right: 20px;
+    /* wrapperの中やからpadding入ってるんかと思いきや、こうやって指定する方が強い。position設定したら抜け出る */
+    z-index: 2;
+  }
+  header h1 #logo {
+    width: 186px;
+    margin-left: 26px;
+    z-index: 2;
+    /* 上に来ない（ ｉ _ ｉ ） */
+
+  }
+}
 
 /* ここからはクラス名でかつjs効いてないバージョン
 .mainvisual {
@@ -22,18 +53,14 @@ header h1 img {
   width: 100%;
 } */
 
-
-
 /* ここからはid名でかつjs書いたバージョン */
-#mainvisual {
+.mainvisual {
   position: relative;
 }
 
 #mainvisual-img {
   width: 100%;
 }
-
-
 
 .catchcopy img {
   width: 242px;
@@ -42,8 +69,25 @@ header h1 img {
   left: 738px;
 }
 
-/* ここからグローバルナビ */
+@media (max-width: 768px) {
 
+  .mainvisual {
+    position: relative;
+  }
+  .catchcopy img {
+    position: absolute;
+    top: 52px;
+    left: 60%;
+    
+  }
+}
+
+
+
+
+
+
+/* ここからグローバルナビ */
 .globalnav ul {
   display: flex;
   justify-content: space-between;
@@ -70,6 +114,58 @@ header h1 img {
 .globalnav ul li a:hover {
   color: #9aaf24;
   background-color: #fafafa;
+}
+
+/* ここからグローバルナビメディアクエリ */
+
+@media (max-width: 768px) {
+  /* .globalnav {
+    小さくしていったら、グローバルナビを消す設定
+    display: none;
+  } */
+
+  .globalnav ul {
+    display: block;
+
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 0;
+    margin-top: 104px;
+    
+  }
+
+  .globalnav ul li {
+    padding: 0;
+    border-bottom: 1px solid #bfbfbf;
+    
+  }
+  .globalnav ul li:first-child {
+    border-top: 1px solid #bfbfbf;
+    
+  }
+
+
+  .globalnav ul li a {
+    font-size: 32px;
+    display: block;
+    border: none;
+    margin: 0 auto;
+    height: 90px;
+    line-height: 90px;
+  }
+
+  .globalnav ul li:first-child a {
+    border-left: none;
+    color: #454545;
+}
+.globalnav ul li a:hover {
+  color: #454545;
+}
 }
 
 /* ここからmainのところ */
@@ -159,7 +255,7 @@ h2 {
 
 /* こっからsubscription */
 
-.subscription-exlanation {
+.subscription-explanation {
   width: 728px;
   height: 48px;
   color: #454545;

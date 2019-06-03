@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/이것이새CSS다.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
@@ -18,12 +18,15 @@
   <body>
     <header>
       <h1>
-        <a href="#"><img src="assets/img/logo.svg" alt="takaosanのロゴ"/></a>
+        <a id="logo" href="#"><img src="assets/img/logo.svg" alt="takaosanのロゴ"/></a>
       </h1>
+
+      <a class="toggle-button" href=""><img src="assets/img/menu.svg" alt="menuを示すトグルボタン" />
+      </a>
     </header>
 
     <div class="mainvisual">
-        <!-- ここからはクラス名でかつjs効いてないバージョン
+      <!-- ここからはクラス名でかつjs効いてないバージョン
       <ul class="mainvisual-img">
         <li><img src="assets/img/mainimage1.png" alt="メインビジュアル1" /></li>
       </ul>
@@ -34,28 +37,27 @@
         <li><img src="assets/img/mainimage3.png" alt="メインビジュアル3" /></li>
       </ul> ここまで-->
 
-
-
       <!-- ここからはid名でかつjs書いたバージョン。参照→ https://www.sejuku.net/blog/63834-->
-      <img id="mainvisual-img" src="assets/img/mainimage1.png">
+      <img id="mainvisual-img" src="assets/img/mainimage1.png" />
       <script>
-      var pics_src = new Array("assets/img/mainimage1.png","assets/img/mainimage2.png","assets/img/mainimage3.png");
-      var num = -1;
-      slideshow_timer();
-      function slideshow_timer(){
-          if (num == 2){
-              num = 0;
-          } 
-          else {
-              num ++;
+        var pics_src = new Array(
+          "assets/img/mainimage1.png",
+          "assets/img/mainimage2.png",
+          "assets/img/mainimage3.png"
+        );
+        var num = -1;
+        slideshow_timer();
+        function slideshow_timer() {
+          if (num == 2) {
+            num = 0;
+          } else {
+            num++;
           }
-          document.getElementById("mainvisual-img").src=pics_src[num];
-          setTimeout("slideshow_timer()",1500); 
-      }
+          document.getElementById("mainvisual-img").src = pics_src[num];
+          setTimeout("slideshow_timer()", 1500);
+        }
       </script>
       <!-- ここまで -->
-
-
 
       <div class="catchcopy">
         <img src="assets/img/catchcopy.png" alt="WORKHARD,PLAYHARD" />
@@ -129,7 +131,7 @@
         <div class="h2titleset">
           <h2>SUBSCRIPTION</h2>
         </div>
-        <p class="subscription-exlanation">
+        <p class="subscription-explanation">
           TAKAOSANオススメの商品を毎月お客様のもとにお送りする定額サービスを実施しております。初月無料なので、安心して始めることが出来ます。
         </p>
 
@@ -200,5 +202,15 @@
     <footer>
       <small>COPYRIGHT TAKAOSAN ALL RIGHT RESERVED.</small>
     </footer>
+
+    <script>
+            $('.toggle-button').on('click', function(){
+                // console.log(11);
+                $('.globalnav ul').slideToggle();
+                $('html').toggleClass('hidden');
+                $('body').toggleClass('hidden');
+                return false;
+            });
+        </script>
   </body>
 </html>
