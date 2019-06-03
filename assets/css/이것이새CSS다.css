@@ -12,28 +12,13 @@ header h1 img {
   margin: 36px 0;
 }
 
-
-/* ここからはクラス名でかつjs効いてないバージョン
 .mainvisual {
   position: relative;
 }
 
 .mainvisual-img {
   width: 100%;
-} */
-
-
-
-/* ここからはid名でかつjs書いたバージョン */
-#mainvisual {
-  position: relative;
 }
-
-#mainvisual-img {
-  width: 100%;
-}
-
-
 
 .catchcopy img {
   width: 242px;
