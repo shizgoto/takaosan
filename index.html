@@ -16,17 +16,21 @@
     <script src="assets/js/slick.min.js"></script>
   </head>
   <body>
-    <header>
-      <h1>
-        <a id="logo" href="#"><img src="assets/img/logo.svg" alt="takaosanのロゴ"/></a>
-      </h1>
+    <div class="wrapper">
+      <header>
+        <h1>
+          <a id="logo" href="#"
+            ><img src="assets/img/logo.svg" alt="takaosanのロゴ"
+          /></a>
+        </h1>
 
-      <a class="toggle-button" href=""><img src="assets/img/menu.svg" alt="menuを示すトグルボタン" />
-      </a>
-    </header>
+        <a class="toggle-button" href=""
+          ><img src="assets/img/menu.svg" alt="menuを示すトグルボタン" />
+        </a>
+      </header>
 
-    <div class="mainvisual">
-      <!-- ここからはクラス名でかつjs効いてないバージョン
+      <div class="mainvisual">
+        <!-- ここからはクラス名でかつjs効いてないバージョン
       <ul class="mainvisual-img">
         <li><img src="assets/img/mainimage1.png" alt="メインビジュアル1" /></li>
       </ul>
@@ -37,180 +41,188 @@
         <li><img src="assets/img/mainimage3.png" alt="メインビジュアル3" /></li>
       </ul> ここまで-->
 
-      <!-- ここからはid名でかつjs書いたバージョン。参照→ https://www.sejuku.net/blog/63834-->
-      <img id="mainvisual-img" src="assets/img/mainimage1.png" />
-      <script>
-        var pics_src = new Array(
-          "assets/img/mainimage1.png",
-          "assets/img/mainimage2.png",
-          "assets/img/mainimage3.png"
-        );
-        var num = -1;
-        slideshow_timer();
-        function slideshow_timer() {
-          if (num == 2) {
-            num = 0;
-          } else {
-            num++;
+        <!-- ここからはid名でかつjs書いたバージョン。参照→ https://www.sejuku.net/blog/63834-->
+        <img id="mainvisual-img" src="assets/img/mainimage1.png" />
+        <script>
+          var pics_src = new Array(
+            "assets/img/mainimage1.png",
+            "assets/img/mainimage2.png",
+            "assets/img/mainimage3.png"
+          );
+          var num = -1;
+          slideshow_timer();
+          function slideshow_timer() {
+            if (num == 2) {
+              num = 0;
+            } else {
+              num++;
+            }
+            document.getElementById("mainvisual-img").src = pics_src[num];
+            setTimeout("slideshow_timer()", 1500);
           }
-          document.getElementById("mainvisual-img").src = pics_src[num];
-          setTimeout("slideshow_timer()", 1500);
-        }
-      </script>
-      <!-- ここまで -->
-
-      <div class="catchcopy">
-        <img src="assets/img/catchcopy.png" alt="WORKHARD,PLAYHARD" />
-      </div>
-    </div>
-
-    <nav class="globalnav">
-      <ul>
-        <li class="nav current"><a href="#">HOME</a></li>
-        <li class="nav"><a href="#">ABOUT</a></li>
-        <li class="nav"><a href="#">SHOP</a></li>
-        <li class="nav"><a href="#">ACCESS</a></li>
-        <li class="nav"><a href="#">BLOG</a></li>
-        <li class="nav"><a href="#">CONTACT</a></li>
-      </ul>
-    </nav>
-
-    <main>
-      <section class="news-wrapper">
-        <div class="h2titleset">
-          <h2>NEWS</h2>
-        </div>
-        <ul>
-          <li>
-            <span>2018.12.17</span>
-            <a href="#"
-              >TAKAOSANオリジナルハードシェルを限定販売いたしました。</a
-            >
-          </li>
-          <li>
-            <span>2018.11.09</span>
-            <a href="#">PFCフリー撥水剤プレゼントキャンペーン実施中</a>
-          </li>
-          <li>
-            <span>2018.06.30</span>
-            <a href="#"
-              >家族参加型 雪上運動会 &山ガールコラボレーションツアーのご案内</a
-            >
-          </li>
-          <li>
-            <span>2018.03.14</span>
-            <a href="#"
-              >TAKAOSANオンラインショップがオープンしました。オンラインクーポンを期間限定で配布中。お見逃なく！</a
-            >
-          </li>
-        </ul>
-      </section>
-
-      <section class="features-wrapper">
-        <div class="h2titleset">
-          <h2>FEATURES</h2>
-        </div>
-        <div class="features">
-          <div class="features-img">
-            <img src="assets/img/features-image.jpg" alt="featureの画像" />
-          </div>
-          <div class="features-text">
-            <h3>アウトドアシーンを想定された防水性</h3>
-
-            <p>
-              TAKAOSANのハードウェアは、最高の素材や最高の技術・革新的なデザインを追求し続けるその姿勢から、「コストパフォーマンスという言葉は存在しない」と言い切るほど、品質に徹底的にこだわるブランド。今では各メーカーで当たり前になっている「止水ジッパー」やTAKAOSANが開発したものです。
-            </p>
-            <p>
-              また、一番人気といわれる「Aero888」をはじめとしたバックパックでは、表生地に"バリスティックナイロン"という強度のある撥水ナイロンを使用し、裏地にもハイパロンという耐性ゴムを使用。表と裏のWの防水で、アウトドアシーンや普段の急な雨でも安心です。
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="subscription-wrapper">
-        <div class="h2titleset">
-          <h2>SUBSCRIPTION</h2>
-        </div>
-        <p class="subscription-explanation">
-          TAKAOSANオススメの商品を毎月お客様のもとにお送りする定額サービスを実施しております。初月無料なので、安心して始めることが出来ます。
-        </p>
-
-        <div class="plan-area">
-          <a href="">
-            <div class="plan">
-              <img
-                src="assets/img/subscription-starter-image.jpg"
-                alt="starterplanの画像"
-              />
-              <h3>Starter</h3>
-              <div class="price">
-                <span class="enmark">¥&nbsp;</span>2,400<span class="mmark"
-                  >/m</span
-                >
-              </div>
-              <p class="plan-explanation">気軽に始められるスタータープラン</p>
-              <p class="plan-button">詳しくはこちら</p>
-            </div>
-          </a>
-          <a href="">
-            <div class="plan">
-              <img
-                src="assets/img/subscription-standard-image.jpg"
-                alt="standardplanの画像"
-              />
-              <h3>Standard</h3>
-              <div class="price"><span>¥&nbsp;</span>7,800<span>/m</span></div>
-              <p class="plan-explanation">当店オススメのスタンダードパック</p>
-              <p class="plan-button">詳しくはこちら</p>
-            </div>
-          </a>
-          <a href="">
-            <div class="plan">
-              <img
-                src="assets/img/subscription-master-image.jpg"
-                alt="massterplanの画像"
-              />
-              <h3>Master</h3>
-              <div class="price"><span>¥&nbsp;</span>16,400<span>/m</span></div>
-              <p class="plan-explanation">ハイブランドを毎月お届けします</p>
-              <p class="plan-button">詳しくはこちら</p>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <section class="items-wrapper">
-        <div class="h2titleset">
-          <h2>ITEMS</h2>
-        </div>
-        <div class="itemspics">
-          <img src="assets/img/items-image01.png" alt="アイテムの画像1" />
-          <img src="assets/img/items-image02.png" alt="アイテムの画像2" />
-          <img src="assets/img/items-image03.png" alt="アイテムの画像3" />
-          <img src="assets/img/items-image04.png" alt="アイテムの画像4" />
-          <img src="assets/img/items-image05.png" alt="アイテムの画像5" />
-          <img src="assets/img/items-image06.png" alt="アイテムの画像6" />
-          <img src="assets/img/items-image07.png" alt="アイテムの画像7" />
-          <img src="assets/img/items-image08.png" alt="アイテムの画像8" />
-          <img src="assets/img/items-image09.png" alt="アイテムの画像9" />
-          <img src="assets/img/items-image10.png" alt="アイテムの画像10" />
-          <img src="assets/img/items-image11.png" alt="アイテムの画像11" />
-          <img src="assets/img/items-image12.png" alt="アイテムの画像12" />
-        </div>
-      </section>
-    </main>
-    <footer>
-      <small>COPYRIGHT TAKAOSAN ALL RIGHT RESERVED.</small>
-    </footer>
-
-    <script>
-            $('.toggle-button').on('click', function(){
-                // console.log(11);
-                $('.globalnav ul').slideToggle();
-                $('html').toggleClass('hidden');
-                $('body').toggleClass('hidden');
-                return false;
-            });
         </script>
+        <!-- ここまで -->
+
+        <div class="catchcopy">
+          <img src="assets/img/catchcopy.png" alt="WORKHARD,PLAYHARD" />
+        </div>
+      </div>
+
+      <nav class="globalnav">
+        <ul>
+          <li class="nav current"><a href="#">HOME</a></li>
+          <li class="nav"><a href="#">ABOUT</a></li>
+          <li class="nav"><a href="#">SHOP</a></li>
+          <li class="nav"><a href="#">ACCESS</a></li>
+          <li class="nav"><a href="#">BLOG</a></li>
+          <li class="nav"><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <section class="news-wrapper">
+          <div class="h2titleset">
+            <h2>NEWS</h2>
+          </div>
+          <ul>
+            <li>
+              <span>2018.12.17</span>
+              <a href="#">
+                TAKAOSANオリジナルハードシェルを限定販売いたしました。</a
+              >
+            </li>
+            <li>
+              <span>2018.11.09</span>
+              <a href="#">PFCフリー撥水剤プレゼントキャンペーン実施中</a>
+            </li>
+            <li>
+              <span>2018.06.30</span>
+              <a href="#"
+                >家族参加型 雪上運動会
+                &山ガールコラボレーションツアーのご案内</a
+              >
+            </li>
+            <li>
+              <span>2018.03.14</span>
+              <a href="#"
+                >TAKAOSANオンラインショップがオープンしました。オンラインクーポンを期間限定で配布中。お見逃なく！</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section class="features-wrapper">
+          <div class="h2titleset">
+            <h2>FEATURES</h2>
+          </div>
+          <div class="features">
+            <div class="features-img">
+              <img src="assets/img/features-image.jpg" alt="featureの画像" />
+            </div>
+            <div class="features-text">
+              <h3>アウトドアシーンを想定された防水性</h3>
+
+              <p class="text1">
+                TAKAOSANのハードウェアは、最高の素材や最高の技術・革新的なデザインを追求し続けるその姿勢から、「コストパフォーマンスという言葉は存在しない」と言い切るほど、品質に徹底的にこだわるブランド。今では各メーカーで当たり前になっている「止水ジッパー」やTAKAOSANが開発したものです。
+              </p>
+              <p class="text2">
+                また、一番人気といわれる「Aero888」をはじめとしたバックパックでは、表生地に"バリスティックナイロン"という強度のある撥水ナイロンを使用し、裏地にもハイパロンという耐性ゴムを使用。表と裏のWの防水で、アウトドアシーンや普段の急な雨でも安心です。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="subscription-wrapper">
+          <div class="h2titleset">
+            <h2>SUBSCRIPTION</h2>
+          </div>
+          <p class="subscription-explanation">
+            TAKAOSANオススメの商品を毎月お客様のもとにお送りする定額サービスを実施しております。初月無料なので、安心して始めることが出来ます。
+          </p>
+
+          <div class="plan-area">
+            <div class="plan">
+              <a href="">
+                <img
+                  src="assets/img/subscription-starter-image.jpg"
+                  alt="starterplanの画像"
+                />
+                <h3>Starter</h3>
+                <div class="price">
+                  <span class="enmark">¥&nbsp;</span>2,400<span class="mmark"
+                    >/m</span
+                  >
+                </div>
+                <p class="plan-explanation">気軽に始められるスタータープラン</p>
+                <p class="plan-button">詳しくはこちら</p>
+              </a>
+            </div>
+
+            <div class="plan">
+              <a href="">
+                <img
+                  src="assets/img/subscription-standard-image.jpg"
+                  alt="standardplanの画像"
+                />
+                <h3>Standard</h3>
+                <div class="price">
+                  <span>¥&nbsp;</span>7,800<span>/m</span>
+                </div>
+                <p class="plan-explanation">当店オススメのスタンダードパック</p>
+                <p class="plan-button">詳しくはこちら</p>
+              </a>
+            </div>
+
+            <div class="plan">
+              <a href="">
+                <img
+                  src="assets/img/subscription-master-image.jpg"
+                  alt="massterplanの画像"
+                />
+                <h3>Master</h3>
+                <div class="price">
+                  <span>¥&nbsp;</span>16,400<span>/m</span>
+                </div>
+                <p class="plan-explanation">ハイブランドを毎月お届けします</p>
+                <p class="plan-button">詳しくはこちら</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="items-wrapper">
+          <div class="h2titleset">
+            <h2>ITEMS</h2>
+          </div>
+          <div class="itemspics">
+            <img src="assets/img/items-image01.png" alt="アイテムの画像1" />
+            <img src="assets/img/items-image02.png" alt="アイテムの画像2" />
+            <img src="assets/img/items-image03.png" alt="アイテムの画像3" />
+            <img src="assets/img/items-image04.png" alt="アイテムの画像4" />
+            <img src="assets/img/items-image05.png" alt="アイテムの画像5" />
+            <img src="assets/img/items-image06.png" alt="アイテムの画像6" />
+            <img src="assets/img/items-image07.png" alt="アイテムの画像7" />
+            <img src="assets/img/items-image08.png" alt="アイテムの画像8" />
+            <img src="assets/img/items-image09.png" alt="アイテムの画像9" />
+            <img src="assets/img/items-image10.png" alt="アイテムの画像10" />
+            <img src="assets/img/items-image11.png" alt="アイテムの画像11" />
+            <img src="assets/img/items-image12.png" alt="アイテムの画像12" />
+          </div>
+        </section>
+      </main>
+      <footer>
+        <small>COPYRIGHT TAKAOSAN ALL RIGHT RESERVED.</small>
+      </footer>
+
+      <script>
+        $(".toggle-button").on("click", function() {
+          // console.log(11);
+          $(".globalnav ul").slideToggle();
+          $("html").toggleClass("hidden");
+          $("body").toggleClass("hidden");
+          return false;
+        });
+      </script>
+    </div>
   </body>
 </html>
