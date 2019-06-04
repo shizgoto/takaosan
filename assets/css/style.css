@@ -1,3 +1,9 @@
+.hidden {
+  overflow:hidden;
+  height: 100vh;
+}
+/* トグル押したときに背景がスクロールされちゃう */
+
 * {
   box-sizing: border-box;
 }
@@ -121,13 +127,12 @@ header .toggle-button {
 /* ここからグローバルナビメディアクエリ */
 
 @media (max-width: 768px) {
-  /* .globalnav {
-    display: none;
-  } */
+
 
   .globalnav ul {
     display: none;
-    height: 100vh;
+    height: 100%;
+    
     position: absolute;
     top: 104.72px;
     left: 0;
@@ -136,6 +141,7 @@ header .toggle-button {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 0;
+    
     /* margin-top: 64px; */
   }
 
@@ -150,6 +156,7 @@ header .toggle-button {
   .globalnav ul li a {
     font-size: 16px;
     /* padding: 12px 0;  */
+    width: 100%;
     display: block;
     border: none;
     margin: 0 auto;
@@ -159,10 +166,10 @@ header .toggle-button {
 
   .globalnav ul li:first-child a {
     border-left: none;
-    color: #454545;
   }
+
   .globalnav ul li a:hover {
-    color: #454545;
+    color: #9aaf24;
   }
 }
 
