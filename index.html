@@ -24,7 +24,7 @@
           /></a>
         </h1>
 
-        <a class="toggle-button" href=""
+        <a class="toggle-button" href="#"
           ><img src="assets/img/menu.svg" alt="menuを示すトグルボタン" />
         </a>
       </header>
@@ -194,35 +194,85 @@
           <div class="h2titleset">
             <h2>ITEMS</h2>
           </div>
-          <div class="itemspics">
-            <img src="assets/img/items-image01.png" alt="アイテムの画像1" />
-            <img src="assets/img/items-image02.png" alt="アイテムの画像2" />
-            <img src="assets/img/items-image03.png" alt="アイテムの画像3" />
-            <img src="assets/img/items-image04.png" alt="アイテムの画像4" />
-            <img src="assets/img/items-image05.png" alt="アイテムの画像5" />
-            <img src="assets/img/items-image06.png" alt="アイテムの画像6" />
-            <img src="assets/img/items-image07.png" alt="アイテムの画像7" />
-            <img src="assets/img/items-image08.png" alt="アイテムの画像8" />
-            <img src="assets/img/items-image09.png" alt="アイテムの画像9" />
-            <img src="assets/img/items-image10.png" alt="アイテムの画像10" />
-            <img src="assets/img/items-image11.png" alt="アイテムの画像11" />
-            <img src="assets/img/items-image12.png" alt="アイテムの画像12" />
-          </div>
+
+          <ul class="itemspics">
+            <li>
+              <a href="">
+                <img src="assets/img/items-image01.png" alt="アイテムの画像1"
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/img/items-image02.png" alt="アイテムの画像2"
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/img/items-image03.png" alt="アイテムの画像3"
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/img/items-image04.png" alt="アイテムの画像4"
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/img/items-image05.png" alt="アイテムの画像5"
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/img/items-image06.png" alt="アイテムの画像6"
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/img/items-image07.png" alt="アイテムの画像7"
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/img/items-image08.png" alt="アイテムの画像8"
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/img/items-image09.png" alt="アイテムの画像9"
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/img/items-image10.png" alt="アイテムの画像10"
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/img/items-image11.png" alt="アイテムの画像11"
+              /></a>
+            </li>
+            <li>
+              <a href="">
+                <img src="assets/img/items-image12.png" alt="アイテムの画像12"
+              /></a>
+            </li>
+          </ul>
         </section>
       </main>
       <footer>
         <small>COPYRIGHT TAKAOSAN ALL RIGHT RESERVED.</small>
       </footer>
 
+      <!-- こっからjavascript -->
       <script>
         $(".toggle-button").on("click", function() {
-          // console.log(11);
           $(".globalnav ul").slideToggle();
           $("html").toggleClass("hidden");
           $("body").toggleClass("hidden");
           return false;
         });
       </script>
+
     </div>
   </body>
 </html>
